@@ -4,13 +4,8 @@
 <div class="anime-left form">
     <h1 class="title">Cadastre-se</h1>
 
-    <?php
-    require "./classes/Usuarios.php";
-
-    $usuarios = new Usuarios();
-    if (isset($_POST['nome']) && !empty($_POST['nome'])) {
-    }
-    ?>
+ 
+    
     <form action="" method="POST">
 
         <div class="wrapper">
@@ -25,6 +20,13 @@
                 Email:
             </label>
             <input type="email" name="email" id="email" class="input">
+        </div>
+
+        <div class="wrapper">
+            <label for="number">
+                Telefone:
+            </label>
+            <input type="number" name="number" id="number" class="input">
         </div>
 
         <div class="wrapper">
