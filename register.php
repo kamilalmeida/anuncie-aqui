@@ -6,7 +6,7 @@
 
  
     
-    <form action="" method="POST">
+    <form action="register_action.php" method="POST">
 
         <div class="wrapper">
             <label for="nome" class="label">
@@ -23,10 +23,10 @@
         </div>
 
         <div class="wrapper">
-            <label for="number">
+            <label for="telephone">
                 Telefone:
             </label>
-            <input type="number" name="number" id="number" class="input">
+            <input type="number" name="telephone" id="telephone" class="input">
         </div>
 
         <div class="wrapper">

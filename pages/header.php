@@ -5,8 +5,6 @@ require "./class/UserDaoMysql.php";
 $userDao = new UserDaoMysql($pdo);
 $list = $userDao->findAll();
 
-
-
 ?>
 
 <!DOCTYPE html>

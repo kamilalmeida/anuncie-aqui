@@ -3,10 +3,11 @@
 class Users
 {
     private $id;
-    private $nome;
+    private $name;
     private $email;
     private $password;
-    private $telefone;
+    private $telephone;
+    
 
     public function getId()
     {
@@ -20,12 +21,12 @@ class Users
 
     public function getName()
     {
-        return $this->nome;
+        return $this->name;
     }
 
     public function setName($name)
     {
-        $this->nome = ucwords(trim($name));
+        $this->name = ucwords(trim($name));
     }
     public function getEmail()
     {
@@ -36,7 +37,7 @@ class Users
     {
         $this->email = strtolower(trim($email));
     }
-    public function getPassowrd()
+    public function getPassword()
     {
         return  $this->password;
     }
@@ -45,14 +46,15 @@ class Users
     {
         $this->password = trim($password);
     }
-    public function getTelefone()
+    public function getTelephone()
     {
-        return  $this->telefone;
+        return  $this->telephone;
+        
     }
 
-    public function setTelefone($tel)
+    public function setTelephone($tel)
     {
-        $this->email = trim($tel);
+        $this->telephone = trim($tel);
     }
 }
 
