@@ -12,7 +12,7 @@ $telephone = filter_input(INPUT_POST, 'telephone');
 $password = filter_input(INPUT_POST, 'password');
 
 
-if ($name && $email && $password) {
+if (!empty($name) && !empty($email) && !empty($password)) {
     if ($userDao->findByEmail($email) === false) {
         $newUser = new Users();
         $newUser->setName($name);
@@ -20,7 +20,7 @@ if ($name && $email && $password) {
         $newUser->setTelephone($telephone);
         $newUser->setPassword($password);
 
-        $userDao->add($newUser);
+        $userDao->addUser($newUser);
 
         header("Location: index.php");
         exit;

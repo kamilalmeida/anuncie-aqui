@@ -60,7 +60,7 @@ class Users
 
 interface UserDao
 {
-    public function add(Users $u);
+    public function addUser(Users $u);
     public function findAll();
     public function findById($d);
     public function findByEmail($email);
