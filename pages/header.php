@@ -1,4 +1,4 @@
-<?php 
+<?php
 require "config.php";
 require "./class/UserDaoMysql.php";
 
@@ -30,9 +30,11 @@ $list = $userDao->findAll();
                     <li class="cadastro"><a href="meus-anuncios.php">Meus anúncios</a></li>
                     <li class="login"><a href="sair.php">Sair</a></li>
                 <?php else : ?>
+                    <li class="cadastro"><a href="register.php">Home</a></li>
                     <li class="cadastro"><a href="register.php">Cadastre-se</a></li>
                     <li class="login"><a href="login.php">Login</a></li>
                 <?php endif; ?>
             </ul>
+            
         </div>
     </nav>

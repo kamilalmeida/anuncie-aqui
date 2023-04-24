@@ -9,10 +9,10 @@
     <form action="register_action.php" method="POST">
 
         <div class="wrapper">
-            <label for="nome" class="label">
-                Nome:
+            <label for="name" class="label">
+                name:
             </label>
-            <input type="text" name="name" id="nome" class="input">
+            <input type="text" name="name" id="name" class="input">
         </div>
 
         <div class="wrapper">
