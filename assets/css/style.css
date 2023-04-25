@@ -187,3 +187,8 @@ div.form {
   display: flex;
   margin: 0 auto;
 }
+
+
+.table{
+border-bottom: solid 1px #333;
+}

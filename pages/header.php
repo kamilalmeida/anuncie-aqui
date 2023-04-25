@@ -27,15 +27,15 @@ require "config.php";
             </header>
             <ul class="nav navbar-nav navbar-right">
                 <?php if (isset($_SESSION['cLogin']) && !empty($_SESSION['cLogin'])) : ?>
-                    <li class="cadastro"><a href="meus-anuncios.php">Meus anúncios</a></li>
-                    <li class="login"><a href="sair.php">Sair</a></li>
+                    <li class="cadastro"><a href="advertisement.php">Meus anúncios</a></li>
+                    <li class="login"><a href="logout.php">Sair</a></li>
                 <?php else : ?>
                     <li class="cadastro"><a href="index.php">Home</a></li>
-                    <li class="cadastro"><a href="index.php">Anúncios</a></li>
+                    <li class="cadastro"><a href="">Anúncios</a></li>
                     <li class="cadastro"><a href="register.php">Cadastre-se</a></li>
                     <li class="login"><a href="login.php">Login</a></li>
                 <?php endif; ?>
             </ul>
-            
+
         </div>
     </nav>

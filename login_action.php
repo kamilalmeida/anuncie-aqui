@@ -12,14 +12,12 @@ $telephone = filter_input(INPUT_POST, 'telephone');
 $password = filter_input(INPUT_POST, 'password');
 
 
-if (!empty($name) && !empty($email) && !empty($password)) {
-    if ($userDao->findByEmail($email) === false) {
-        $userDao->login($email, $password);
+if (!empty($email) && !empty($password)) {
 
+    $userDao->login($email, $password);
 
-        header("Location: index.php");
-        exit;
-    }
+    header("Location: index.php");
+    exit;
 } else {
 ?>
     <div>Preencha todos os campos</div>
