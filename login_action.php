@@ -1,5 +1,3 @@
-
-
 <?php
 
 require "config.php";
@@ -16,14 +14,7 @@ $password = filter_input(INPUT_POST, 'password');
 
 if (!empty($name) && !empty($email) && !empty($password)) {
     if ($userDao->findByEmail($email) === false) {
-        $newUser = new Users();
-        $newUser->setName($name);
-        $newUser->setEmail($email);
-        $newUser->setTelephone($telephone);
-        $newUser->setPassword($password);
-
-        $userDao->addUser($newUser);
-
+        $userDao->login($email, $password);
 
 
         header("Location: index.php");

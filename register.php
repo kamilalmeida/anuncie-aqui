@@ -1,16 +1,20 @@
-<?php require "./pages/header.php"; ?>
+<?php require "./pages/header.php";
+?>
+<?php  
+require"./class/UserDaoMysql.php";
 
+
+
+?>
 
 <div class="anime-left form">
     <h1 class="title">Cadastre-se</h1>
 
- 
-    
     <form action="register_action.php" method="POST">
 
         <div class="wrapper">
             <label for="name" class="label">
-                name:
+                Nome:
             </label>
             <input type="text" name="name" id="name" class="input">
         </div>

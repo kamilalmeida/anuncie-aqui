@@ -1,13 +1,13 @@
 <?php
 require "config.php";
-require "./class/UserDaoMysql.php";
+// require "./class/UserDaoMysql.php";
 
-$userDao = new UserDaoMysql($pdo);
-$list = $userDao->findAll();
+// $userDao = new UserDaoMysql($pdo);
+// $list = $userDao->findAll();
 
 ?>
 
-<!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
