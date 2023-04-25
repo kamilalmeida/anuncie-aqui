@@ -4,7 +4,7 @@ require "./pages/header.php"; ?>
 <div class="advertisement">
     <h1>Meus anúncios</h1>
 
-    <table class="table" width="100%">
+    <table class="table" width="50%">
         <thead>
             <tr>
                 <th>Foto</th>
@@ -13,8 +13,11 @@ require "./pages/header.php"; ?>
                 <th>Ações</th>
             </tr>
         </thead>
+        <?php
+        $advertisement = new Advertisement();
 
 
+        ?>
     </table>
 </div>
 

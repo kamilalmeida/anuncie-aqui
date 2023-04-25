@@ -15,10 +15,8 @@ body {
   align-items: center;
 
   background-color: #333;
-  width: 100%;
+
   padding: 2rem;
-
-
 }
 
 .navbar-header a,
@@ -60,7 +58,6 @@ a {
 li {
   list-style: none;
 }
-
 
 .buttons {
   position: absolute;
@@ -188,7 +185,20 @@ div.form {
   margin: 0 auto;
 }
 
+.advertisement h1 {
+  display: flex;
+  justify-content: center;
 
-.table{
-border-bottom: solid 1px #333;
+
+  background-color: #333;
+  color: #fff;
+
+  padding-bottom: 20px;
+}
+
+.table {
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: #33333300 solid 1px;
+  box-shadow: 10px 5px 5px #33333377;
 }
