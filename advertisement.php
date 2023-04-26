@@ -33,9 +33,15 @@ require "./pages/header.php"; ?>
         foreach ($Alladvertisement as $advertisement) :
         ?>
             <tr>
-                <td><img src="./assets/img/advertisement/<?php echo $advertisement['url']; ?>" alt=""></td>
-                <td><?php echo $advertisement['title']; ?></td>
-                <td> R$<?php echo number_format($advertisement['price'], 2); ?></td>
+                <td align="center">
+                    <?php if (!empty($advertisement['url'])) : ?>
+                        <img src="./assets/img/advertisement/<?php echo $advertisement['url']; ?>" height="100" border="0" alt="">
+                    <?php else : ?>
+                        <img src="./assets/img/advertisement/camera.png" height="50 " border="0" alt="">
+                    <?php endif; ?>
+                </td>
+                <td align="center"><?php echo $advertisement['title']; ?></td>
+                <td align="center"> R$<?php echo number_format($advertisement['price'], 2); ?></td>
             </tr>
         <?php endforeach; ?>
     </table>

@@ -15,14 +15,14 @@ require "./pages/header.php"; ?>
     <h1>Meus anúncios - Adicionar anúncio</h1>
 
     <div class="anime-left form">
-        <form action="advertisement_action.php" method="POST">
+        <form action="advertisement_action.php" method="POST" enctype="multipart/form-data">
 
             <div class="wrapper">
                 <label for="category" class="label">
                     Categoria:
                 </label>
-                <select name="category" id="category">
-
+                <select name="category" id="category" class="input">
+                    <option value="0">Selecione</option>
                     <?php require "./class/CategoryDaoMysql.php";
                     $category = new CategoryDaoMysql($pdo);
                     $Allcategory = $category->getListCategory();
@@ -72,7 +72,7 @@ require "./pages/header.php"; ?>
                 <label for="category" class="label">
                     Estado financeiro:
                 </label>
-                <select name="state" id="state">
+                <select name="state" id="state" class="input">
                     <option value="0">Selecione</option>
                     <option value="1">Financiado</option>
                     <option value="2">Com multas</option>
