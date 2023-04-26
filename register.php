@@ -1,11 +1,7 @@
 <?php require "./pages/header.php";
+require "./class/UserDaoMysql.php";
 ?>
-<?php  
-require"./class/UserDaoMysql.php";
 
-
-
-?>
 
 <div class="anime-left form">
     <h1 class="title">Cadastre-se</h1>

@@ -24,13 +24,11 @@ if (!empty($name) && !empty($email) && !empty($password)) {
 
 
 
-        header("Location: index.php");
+        header("Location: login.php");
         exit;
     }
 } else {
-?>
-    <div>Preencha todos os campos</div>
-<?php
+
 
     header("Location:register.php");
     exit;

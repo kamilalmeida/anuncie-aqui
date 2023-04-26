@@ -1,38 +1,36 @@
 <?php
 
 require "config.php";
-require "./class/UserDaoMysql.php";
+require "./class/AdvertisementDaoMysql.php";
 
-$userDao = new UserDaoMysql($pdo);
-
-
-$name = filter_input(INPUT_POST, 'name');
-$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-$telephone = filter_input(INPUT_POST, 'telephone');
-$password = filter_input(INPUT_POST, 'password');
+$AdvertisementDao = new AdvertisementDaoMysql($pdo);
 
 
-if (!empty($name) && !empty($email) && !empty($password)) {
-    if ($userDao->findByEmail($email) === false) {
-        $newUser = new Users();
-        $newUser->setName($name);
-        $newUser->setEmail($email);
-        $newUser->setTelephone($telephone);
-        $newUser->setPassword($password);
+$title = filter_input(INPUT_POST, 'title');
+$category = filter_input(INPUT_POST, 'category');
+$price = filter_input(INPUT_POST, 'price');
+$description = filter_input(INPUT_POST, 'description');
+$state = filter_input(INPUT_POST, 'state');
+$modelYear = filter_input(INPUT_POST, 'model_year');
+$mileage = filter_input(INPUT_POST, 'mileage');
 
-        $userDao->addUser($newUser);
+
+
+if (!empty($title)) {
+
+        $advertisement = new MyAdvertisement();
+        $advertisement->setTitle($title);
+        $advertisement->setIdCategory($category);
+        $advertisement->setPrice($price);
+        $advertisement->setDescription($description);
+        $advertisement->setState($state);
+        $advertisement->setModelYear($modelYear);
+        $advertisement->setMileage($mileage);
+
+        $AdvertisementDao->Addadvertisement($advertisement);
 
 
 
         header("Location: index.php");
         exit;
-    }
-} else {
-?>
-    <div>Preencha todos os campos</div>
-<?php
-
-    header("Location:register.php");
-    exit;
 }
-?>

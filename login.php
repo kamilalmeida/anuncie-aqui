@@ -4,8 +4,30 @@
 
 <div class="anime-left form">
     <h1 class="title">Login</h1>
+    <?php
+    require "./class/UserDaoMysql.php";
 
-    <form action="login_action.php" method="POST">
+    $userDao = new UserDaoMysql($pdo);
+
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $password = filter_input(INPUT_POST, 'password');
+
+    if (isset($_POST['email'])) {
+        if ($userDao->login($email, $password)) {
+    ?>
+            <script type="text/javascript">
+                window.location.href = "index.php";
+            </script>
+        <?php
+        } else {
+        ?>
+            <p class="alert">Usuário e/ou senha incorretos</p>
+    <?php
+        }
+    }
+    ?>
+
+    <form method="POST">
 
         <div class="wrapper">
             <label for="email" class="label">
