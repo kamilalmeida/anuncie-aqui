@@ -8,7 +8,7 @@ $AdvertisementDao = new AdvertisementDaoMysql($pdo);
 
 $title = filter_input(INPUT_POST, 'title');
 $category = filter_input(INPUT_POST, 'category');
-$price = filter_input(INPUT_POST, 'price');
+$price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_INT);
 $description = filter_input(INPUT_POST, 'description');
 $state = filter_input(INPUT_POST, 'state');
 $modelYear = filter_input(INPUT_POST, 'model_year');
@@ -27,10 +27,10 @@ if (!empty($title)) {
         $advertisement->setModelYear($modelYear);
         $advertisement->setMileage($mileage);
 
-        $AdvertisementDao->Addadvertisement($advertisement);
+        $AdvertisementDao->addAdvertisement($advertisement);
 
 
 
-        header("Location: index.php");
+        header("Location: advertisement.php");
         exit;
 }

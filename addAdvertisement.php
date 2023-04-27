@@ -15,7 +15,7 @@ require "./pages/header.php"; ?>
     <h1>Meus anúncios - Adicionar anúncio</h1>
 
     <div class="anime-left form">
-        <form action="advertisement_action.php" method="POST" enctype="multipart/form-data">
+        <form action="addAdvertisement_action.php" method="POST" enctype="multipart/form-data">
 
             <div class="wrapper">
                 <label for="category" class="label">

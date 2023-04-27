@@ -42,6 +42,21 @@ require "./pages/header.php"; ?>
                 </td>
                 <td align="center"><?php echo $advertisement['title']; ?></td>
                 <td align="center"> R$<?php echo number_format($advertisement['price'], 2); ?></td>
+                <td align="center">
+                    <table>
+                        <tr>
+                            <td height="20px"></td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top"><a href="edit_ad.php?id=<?php echo $advertisement['id']; ?>" class="edit">Editar</a></td>
+                            <td width="20px"></td>
+                            <td align="right"><a href="delete_ad.php?id=<?php echo $advertisement['id']; ?>" class="delete">Excluir</a></td>
+                        </tr>
+                        <tr>
+                            <td height="10px"></td>
+                        </tr>
+                    </table>
+                </td>
             </tr>
         <?php endforeach; ?>
     </table>

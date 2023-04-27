@@ -203,13 +203,11 @@ div.form {
   /* box-shadow: 10px 5px 5px #33333377; */
 }
 
-
-th{
+th {
   background-color: #f4f40093;
   box-shadow: 10px 5px 5px #33333377;
 
   padding: 10px;
-
 }
 
 .btn-add-advertisement {
@@ -230,13 +228,11 @@ th{
 
   margin-top: 0.5rem;
 
-  transition: .3s all;
-
-  
+  transition: 0.3s all;
 }
-.btn-add-advertisement:hover{
-background-color: #333;
-color: #fff;
+.btn-add-advertisement:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 .btn-send-advertisement {
@@ -260,15 +256,48 @@ color: #fff;
   background: #f4f400;
 }
 
-.alert{
+.alert {
   background-color: #db353594;
-  color:#380909b8;
+  color: #380909b8;
 
-font-size: 1rem;
+  font-size: 1rem;
 
-padding: 1rem;
+  padding: 1rem;
 
-border-radius: 8px;
+  border-radius: 8px;
 
-margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.acoes-advetisement{
+  margin-top: 1rem;
+
+}
+.edit,
+.delete {
+  padding: 10px;
+  color: #333;
+  border-radius: 8px;
+
+}
+
+.edit:hover{
+  background: rgba(0, 128, 0, 0.644);
+  box-shadow: 10px 5px 5px #33333377;
+
+  color: #fff;
+  font-weight: 600;
+
+
+}
+
+
+.delete:hover{
+  background: #bf4343c7;
+  box-shadow: 10px 5px 5px #33333377;
+
+  color: #fff;
+  font-weight: 600;
+  
+
+
 }

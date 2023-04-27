@@ -103,4 +103,7 @@ interface AdvertisementDao
 {
     public function getAdvertisement();
     public function Addadvertisement(MyAdvertisement $a);
+    public function getAdvertisementId($id);
+    public function editAdvertisement(MyAdvertisement $a);
+    public function deleteAdvertisement($id);
 }
