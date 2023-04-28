@@ -11,6 +11,7 @@ class MyAdvertisement
     private $state;
     private $model_year;
     private $mileage;
+    private $photos;
 
     public function getId()
     {
@@ -96,6 +97,15 @@ class MyAdvertisement
     public function setMileage($mileage)
     {
         $this->mileage = $mileage;
+    }
+    public function getPhotos()
+    {
+        return $this->photos;
+    }
+
+    public function setPhotos($photos)
+    {
+        $this->photos = $photos;
     }
 }
 

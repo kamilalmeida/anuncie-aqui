@@ -81,6 +81,13 @@ require "./pages/header.php"; ?>
                 </select>
             </div>
 
+            <div class="wrapper">
+                <label for="add_photo" class="label">
+                    Fotos
+                </label>
+                <input type="file" name="photos" multiple>
+            </div>
+
             <input type="submit" value="Adicionar" class="btn-send-advertisement">
         </form>
     </div>

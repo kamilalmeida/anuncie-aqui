@@ -268,36 +268,38 @@ th {
 
   margin-bottom: 1.5rem;
 }
-.acoes-advetisement{
+.acoes-advetisement {
   margin-top: 1rem;
-
 }
 .edit,
 .delete {
   padding: 10px;
   color: #333;
   border-radius: 8px;
-
 }
 
-.edit:hover{
+.edit:hover {
   background: rgba(0, 128, 0, 0.644);
   box-shadow: 10px 5px 5px #33333377;
 
   color: #fff;
   font-weight: 600;
-
-
 }
 
-
-.delete:hover{
+.delete:hover {
   background: #bf4343c7;
   box-shadow: 10px 5px 5px #33333377;
 
   color: #fff;
   font-weight: 600;
-  
+}
+.product-add {
+  position: absolute;
+  top: 13rem;
+  left: 51rem;
 
+  background: rgba(0, 128, 0, 0.39);
+  color: rgba(0, 128, 0, 1);
 
+  padding: 20px;
 }

@@ -37,7 +37,7 @@ require "./pages/header.php"; ?>
                     <?php if (!empty($advertisement['url'])) : ?>
                         <img src="./assets/img/advertisement/<?php echo $advertisement['url']; ?>" height="100" border="0" alt="">
                     <?php else : ?>
-                        <img src="./assets/img/advertisement/camera.png" height="50 " border="0" alt="">
+                        <img src="./assets/images/advertisement/camera.png" height="50 " border="0" alt="">
                     <?php endif; ?>
                 </td>
                 <td align="center"><?php echo $advertisement['title']; ?></td>

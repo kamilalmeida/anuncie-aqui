@@ -13,8 +13,13 @@ $description = filter_input(INPUT_POST, 'description');
 $state = filter_input(INPUT_POST, 'state');
 $modelYear = filter_input(INPUT_POST, 'model_year');
 $mileage = filter_input(INPUT_POST, 'mileage');
+$photos = $_FILES['photos'];
 
-
+if (isset($_FILES['photos'])) {
+        $photos = $_FILES['photos'];
+} else {
+        $photos = [];
+}
 
 if (!empty($title)) {
 
@@ -26,11 +31,13 @@ if (!empty($title)) {
         $advertisement->setState($state);
         $advertisement->setModelYear($modelYear);
         $advertisement->setMileage($mileage);
+        $advertisement->setPhotos($photos);
 
         $AdvertisementDao->addAdvertisement($advertisement);
 
 
-
         header("Location: advertisement.php");
         exit;
+}else{
+        header("Location:addAdvertisement.php");
 }

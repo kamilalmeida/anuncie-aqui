@@ -5,7 +5,10 @@ require "./class/AdvertisementDaoMysql.php";
 ?>
 
 
-<?php if (empty($_SESSION['cLogin'])) {
+<?php
+$advertisementDao = new AdvertisementDaoMysql($pdo);
+
+if (empty($_SESSION['cLogin'])) {
 ?>
     <script type="text/javascript">
         window.location.href = "./login.php"
@@ -13,14 +16,8 @@ require "./class/AdvertisementDaoMysql.php";
 <?php
     exit;
 }
-?>
 
-<?php
-
-if (isset($_GET['id']) && !empty($_GET['id'])) {
-    $advertisementDao = new AdvertisementDaoMysql($pdo);
-    $infoInputs = $advertisementDao->getAdvertisementId($_GET['id']);
-
+if (isset($_POST['title']) && !empty($_POST['title'])) {
 
     $title = filter_input(INPUT_POST, 'title');
     $category = filter_input(INPUT_POST, 'category');
@@ -29,6 +26,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $state = filter_input(INPUT_POST, 'state');
     $modelYear = filter_input(INPUT_POST, 'model_year');
     $mileage = filter_input(INPUT_POST, 'mileage');
+    $photos = $_FILES['photos'];
+
+
+    if (isset($_FILES['photos'])) {
+        $photos = $_FILES['photos'];
+    } else {
+        $photos = [];
+    }
 
     $advertisement = new MyAdvertisement();
     $advertisement->setTitle($title);
@@ -39,14 +44,18 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $advertisement->setModelYear($modelYear);
     $advertisement->setMileage($mileage);
     $advertisement->setId($_GET['id']);
+    $advertisement->setPhotos($photos);
+
 
     $advertisementDao->editAdvertisement($advertisement);
-} else {
 ?>
-    <script type="text/javascript">
-        window.location.href = "./advertisement.php"
-    </script>
+    <div class="product-add">Produto editado com sucesso!</div>
+
 <?php
+}
+if (isset($_GET['id']) && !empty($_GET['id'])) {
+    $infoInputs = $advertisementDao->getAdvertisementId($_GET['id']);
+} else {
 }
 ?>
 
@@ -123,7 +132,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 </select>
             </div>
 
-            <input type="submit" value="Salvar" class="btn-send-advertisement">
+            <div class="wrapper">
+                <label for="add_photo" class="label">
+                    Fotos
+                </label>
+                <input type="file" name="photos[]" multiple>
+            </div>
+
+            <input type="submit" value="Salvar" class="btn-send-advertisement" name="save">
         </form>
     </div>
 </div>

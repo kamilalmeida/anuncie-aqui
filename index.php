@@ -3,7 +3,7 @@
 
 <div class="container">
     <div>
-        <img src="./assets/img/Background1.png" alt="" class="img-banner">
+        <img src="./assets/images/Background1.png" alt="" class="img-banner">
     </div>
     <h1 class="title-banner">Nunca foi tão simples alugar e vender</h1>
     <div class="buttons">
